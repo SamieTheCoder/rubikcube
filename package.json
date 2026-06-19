@@ -1,0 +1,33 @@
+{
+  "name": "@samiethecoder/add-cube",
+  "version": "1.0.0",
+  "description": "Add a premium 3D Rubik's Cube component to your project. Supports React, Next.js, and Vue.",
+  "bin": {
+    "add-cube": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "templates/**/*"
+  ],
+  "keywords": [
+    "rubiks-cube",
+    "threejs",
+    "3d",
+    "react",
+    "nextjs",
+    "vue",
+    "component",
+    "cli",
+    "shadcn"
+  ],
+  "author": "SamieTheCoder",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamieTheCoder/rubikcube"
+  },
+  "dependencies": {
+    "fs-extra": "11.2.0",
+    "prompts": "2.4.2"
+  }
+}
