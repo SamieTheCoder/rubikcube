@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
@@ -18,7 +18,7 @@ interface RubiksCubeProps {
   className?: string;
 }
 
-export const RubiksCube: React.FC<RubiksCubeProps> = ({
+export function RubiksCube({
   baseColor = '#0a0a0a',
   textureIntensity = 0.003,
   cornerRadius = 0.05,
@@ -29,7 +29,7 @@ export const RubiksCube: React.FC<RubiksCubeProps> = ({
   enableLayerRotation = true,
   enableCubeRotation = false,
   className = '',
-}) => {
+}: RubiksCubeProps) {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -310,6 +310,6 @@ export const RubiksCube: React.FC<RubiksCubeProps> = ({
   }, [baseColor, textureIntensity, cornerRadius, baseSpacing, hoverSpacing, layerSpeed, cubeSpeed, enableLayerRotation, enableCubeRotation]);
 
   return <div ref={mountRef} className={`w-full h-full cursor-grab active:cursor-grabbing ${className}`} />;
-};
+}
 
 export default RubiksCube;
