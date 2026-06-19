@@ -38,7 +38,7 @@ async function main() {
   };
 
   const template = templateMap[response.framework];
-  const sourcePath = path.join(__dirname, 'templates', template.file);
+  const sourcePath = path.join(__dirname, '..', 'templates', template.file);
   const targetDir = path.join(process.cwd(), response.directory);
   const targetPath = path.join(targetDir, template.name);
 
